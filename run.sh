@@ -31,7 +31,7 @@ npm install --loglevel=error
 
 sleep 10s
 
-bower install
+# bower install
 
 # disable Chrome or Firefox for npm test
 # edit file testem.js

@@ -1,5 +1,9 @@
 # DiceRoller
 
+### Testing
+
+![testing](/ember_test.png "ember test")
+
 ## Install PhantomJS
 
 ```sh
@@ -15,13 +19,6 @@ mv $PHANTOM_JS /usr/local/share
 ln -s /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
 phantomjs --version
 ```
-
-I think that approach would not be very efficien. As components are
-suppose to work independently. Rather when an event happens and you want
-to transition to another route, use sendAction 96 in the component with
-needed arrguments and let route handle the transition. You can also use
-closure action 50 instead of sendAction.
-
 ### May 2018 by Oleg G.kapranov
 
 [1]: https://github.com/sazzer/dice-roller
