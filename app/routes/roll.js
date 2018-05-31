@@ -4,7 +4,10 @@ export default Route.extend({
   actions: {
     saveRoll: function(rollName, numberOfDice, numberOfSides) {
       // alert(`Rolling ${numberOfDice}D${numberOfSides} as "${rollName}"`);
+
+      let self = this;
       let result = 0;
+
       for (let i = 0; i < numberOfDice; ++i) {
         result += 1 + (parseInt(Math.random() * numberOfSides));
       }
@@ -16,9 +19,10 @@ export default Route.extend({
         numberOfSides,
         result
       });
+
       roll.save().then(
-        () => this.transitionTo('application')
+        () => self.transitionTo('application')
       );
-    },
+    }
   }
 });
